@@ -1,0 +1,36 @@
+<section class="mt-5 mx-3">
+  <div class="row bg-light">
+    <div class="col-md-6 parentImg p-3">
+      <img src="./assets/home/6b3905732e036a1290d0c91c64019e3a.png" class="w-100" alt="img logo">
+    </div>
+    <div class="col-md-6 p-4">
+      <p class="text-center fw-bold title">Login</p>
+      <form class="mt-4" [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+        <input type="email" placeholder="Email address" class="form-control mt-3" formControlName='email'>
+        <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched" class="alert alert-danger">
+          <p class="m-0" *ngIf="loginForm.get('email')?.getError('required')">Email Is Required</p>
+          <p class="m-0" *ngIf="loginForm.get('email')?.getError('email')">Email Invalid</p>
+        </div>
+        <input type="password" placeholder="Password" class="form-control mt-3" formControlName='password'>
+        <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class="alert alert-danger">
+          <p class="m-0" *ngIf="loginForm.get('password')?.getError('required')">Password Is Required</p>
+          <p class="m-0" *ngIf="loginForm.get('password')?.getError('minlength')">Password Min Length Is 5</p>
+        </div>
+        <button class="btn w-100 mt-3 fw-bold border-0" type="submit" [disabled]="loginForm.invalid">
+          <span class="position-relative z-3">LOGIN</span>
+        </button>
+      </form>
+      <div class="w-100 text-center">
+        <a routerLink="/signUp" class="text-muted">Don't Have an account? Sign Up</a>
+      </div>
+      <div class="mt-4 border-top">
+        <button class="btn w-100 mt-3 fw-bold border-0">
+          <span class="position-relative z-3"><i class="fa-brands fa-google border p-2 rounded-circle"></i> SIGN IN WITH GOOGLE</span>
+        </button>
+        <button class="btn w-100 mt-3 fw-bold border-0">
+          <span class="position-relative z-3"><i class="fa-brands fa-facebook border p-2 rounded-circle"></i> SIGN IN WITH FACEBOOK</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

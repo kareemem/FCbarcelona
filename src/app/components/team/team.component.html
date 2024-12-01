@@ -1,0 +1,76 @@
+<section class="team p-2">
+  <div class="goolKeepers">
+    <h2 class="p-3 text-white text-center">GOALKEEPERS</h2>
+    <div class="row gy-4 mt-3">
+      <div class="col-md-4 mx-auto wow  animate__flash" data-wow-duration="2s" data-wow-delay="0s"  *ngFor="let item of goalKeepers">
+        <div class="position-relative">
+          <img [src]='"./assets/team/goalKeepers/"+item.src ' class="w-100" alt="img goalKeepers">
+          <div class="position-absolute bottom-0 start-0 end-0">
+            <p class="num text-center">{{item.num}}</p>
+            <p class="name pb-0 mb-0 text-white text-center">{{item.name}}</p>
+            <p class="text-white fw-bold text-center">{{item.title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="defenders mt-5">
+    <h2 class="p-3 text-white text-center">DEFENDERS</h2>
+    <div class="row gy-4 mt-3">
+      <div class="col-md-4 mx-auto wow  animate__flash" data-wow-duration="2s" data-wow-delay="0s"  *ngFor="let item of defeenders">
+        <div class="position-relative">
+          <img [src]='"./assets/team/defeenders/"+item.src ' class="w-100" alt="img DEFENDERS">
+          <div class="position-absolute bottom-0 start-0 end-0">
+            <p class="num text-center">{{item.num}}</p>
+            <p class="name pb-0 mb-0 text-white text-center">{{item.name}}</p>
+            <p class="text-white fw-bold text-center">{{item.title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="middle mt-5">
+    <h2 class="p-3 text-white text-center">MIDFIELDERS</h2>
+    <div class="row gy-4 mt-3">
+      <div class="col-md-4 mx-auto wow  animate__flash" data-wow-duration="2s" data-wow-delay="0s"  *ngFor="let item of midfielders">
+        <div class="position-relative">
+          <img [src]='"./assets/team/midfielders/"+item.src ' class="w-100" alt="img MIDFIELDERS">
+          <div class="position-absolute bottom-0 start-0 end-0">
+            <p class="num text-center">{{item.num}}</p>
+            <p class="name pb-0 mb-0 text-white text-center">{{item.name}}</p>
+            <p class="text-white fw-bold text-center">{{item.title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="forward mt-5">
+    <h2 class="p-3 text-white text-center">FORWARDS</h2>
+    <div class="row gy-4 mt-3">
+      <div class="col-md-4 mx-auto wow  animate__flash" data-wow-duration="2s" data-wow-delay="0s"  *ngFor="let item of forwards">
+        <div class="position-relative">
+          <img [src]='"./assets/team/forwards/"+item.src ' class="w-100" alt="img FORWARDS">
+          <div class="position-absolute bottom-0 start-0 end-0">
+            <p class="num text-center">{{item.num}}</p>
+            <p class="name pb-0 mb-0 text-white text-center">{{item.name}}</p>
+            <p class="text-white fw-bold text-center">{{item.title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="coach mt-5">
+    <h2 class="p-3 text-white text-center">COACHING STAFF</h2>
+    <div class="row gy-4 mt-3">
+      <div class="col-md-4 mx-auto wow  animate__flash" data-wow-duration="2s" data-wow-delay="0s"  *ngFor="let item of coach">
+        <div class="position-relative">
+          <img [src]='"./assets/team/coach/"+item.src ' class="w-100" alt="img coach">
+          <div class="position-absolute bottom-0 start-0 end-0">
+            <p class="name pb-0 mb-0 text-white text-center">{{item.name}}</p>
+            <p class="text-white fw-bold text-center">{{item.title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

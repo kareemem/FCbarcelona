@@ -1,0 +1,22 @@
+<section class="store p-2">
+  <div class="row gy-5">
+    <div class="col-md-4" *ngFor="let item of store | paginate: { id: 'store',
+    itemsPerPage: 9,
+    currentPage: page,
+    totalItems: total }">
+      <div>
+        <div class="position-relative parentImg">
+          <img [src]='"./assets/store/"+item.src' alt="img store" class="w-100">
+          <i class="me-1 mb-1 fa-solid fa-heart position-absolute bottom-0 end-0 bg-white rounded-circle p-2"></i>
+        </div>
+        <div class="mt-2">
+          <p class="name text-white fw-bold wow  animate__fadeInDown" data-wow-duration="2s" data-wow-delay="0s">{{item.title}}</p>
+          <p class="price text-white fw-bold wow  animate__fadeInDown" data-wow-duration="2.5s" data-wow-delay="0s">{{item.price|currency:'eur'}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center fw-bold text-warning">
+      <pagination-controls (pageChange)="changePage($event)" id="store"></pagination-controls>
+    </div>
+  </div>
+</section>

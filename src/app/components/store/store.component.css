@@ -1,0 +1,25 @@
+i{
+    color: gray;
+    font-size: 20px;
+    cursor: pointer;
+  transition-duration: 0.5s;
+  }
+i:hover{
+  color: red;
+}
+.name
+{
+  font-size: 20px;
+}
+img
+{
+  height: 31.875rem;
+  transition-duration: 0.5s;
+}
+.parentImg{
+  overflow: hidden;
+}
+.parentImg:hover img {
+  transform: scale(1.1,1.1);
+}
+

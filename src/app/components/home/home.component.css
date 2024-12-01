@@ -1,0 +1,62 @@
+.textNum{
+  color: rgb(228, 183, 34);
+}
+@keyframes upDown{
+  0%{transform: translateY(0);}
+  100%{transform: translateY(20px);}
+}
+.head img{
+  animation-name: upDown;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+head p{
+  font-size: 1.25rem;
+}
+.achievements img{
+width: 312px;
+height: 184px;
+}
+.achievements .layerY{
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(105, 105, 105,0.3);
+  transition-duration: 0.5s;
+}
+
+.achievements .parentImg:hover .layerY{
+  top: 0;
+}
+
+.legends ul {
+  list-style-type: circle;
+}
+.legends li{
+  color: white;
+}
+.legends .col-md-8 img{
+  height: 350px;
+}
+.legends .hL{
+  height: 550px;
+}
+
+.gallery img{
+  width: 312px;
+  height: 184px;
+  }
+
+.myTeam div{
+  background-image: url('../../../assets/home/fc-barcelona-arena-barcelona-wallpaper-preview.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.sponsrs img{
+  height: 5rem;
+  width: 7.375rem;
+}

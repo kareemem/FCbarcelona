@@ -1,0 +1,48 @@
+<section class="mt-5 mx-3">
+  <div class="row bg-light">
+    <div class="col-md-6 parentImg p-3">
+      <img src="./assets/home/6b3905732e036a1290d0c91c64019e3a.png" class="w-100" alt="img logo">
+    </div>
+    <div class="col-md-6 p-4">
+      <p class="text-center fw-bold title">Sign Up</p>
+      <form class="mt-4" [formGroup]="registerForm" (ngSubmit)="handleRegister(registerForm)">
+        <input type="text" placeholder="User name" class="form-control mt-3" formControlName='name'>
+        <div *ngIf="registerForm.get('name')?.errors && registerForm.get('name')?.touched" class="alert alert-danger">
+          <p class="m-0" *ngIf="registerForm.get('name')?.getError('required')">Name Is Required</p>
+          <p class="m-0" *ngIf="registerForm.get('name')?.getError('minlength')">Name Min Length Is 3</p>
+          <p class="m-0" *ngIf="registerForm.get('name')?.getError('maxlength')">Name Max Length Is 20</p>
+        </div>
+        <input type="email" placeholder="Email address" class="form-control mt-3" formControlName='email'>
+        <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched" class="alert alert-danger">
+          <p class="m-0" *ngIf="registerForm.get('email')?.getError('required')">Email Is Required</p>
+          <p class="m-0" *ngIf="registerForm.get('email')?.getError('email')">Email Invalid</p>
+        </div>
+        <input type="password" placeholder="Password" class="form-control mt-3" formControlName='password'>
+        <div *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched" class="alert alert-danger">
+          <p class="m-0" *ngIf="registerForm.get('password')?.getError('required')">Password Is Required</p>
+          <p class="m-0" *ngIf="registerForm.get('password')?.getError('minlength')">Password Min Length Is 5</p>
+        </div>
+        <input type="password" placeholder="Confirm password" class="form-control mt-3" formControlName='confirmPassword'>
+        <div *ngIf="registerForm.get('confirmPassword')?.errors && registerForm.get('confirmPassword')?.touched" class="alert alert-danger">
+          <p class="m-0" *ngIf="registerForm.get('confirmPassword')?.getError('required')">Confirm Password Is Required</p>
+          <p class="m-0" *ngIf="registerForm.get('confirmPassword')?.getError('minlength')">Confirm Password Min Length Is 5</p>
+          <p class="m-0" *ngIf="registerForm.get('confirmPassword')?.getError('confirmPasswordMatch')">Confirm Password Not Match Password</p>
+        </div>
+        <button class="btn w-100 mt-3 fw-bold border-0" type="submit" [disabled]="registerForm.invalid">
+          <span class="position-relative z-3">SIGN UP</span>
+        </button>
+      </form>
+      <div class="w-100 text-center">
+        <a routerLink="/signIn" class="text-muted">Have an account? Login</a>
+      </div>
+      <div class="mt-4 border-top">
+        <button class="btn w-100 mt-3 fw-bold border-0">
+          <span class="position-relative z-3"><i class="fa-brands fa-google border p-2 rounded-circle"></i> SIGN UP WITH GOOGLE</span>
+        </button>
+        <button class="btn w-100 mt-3 fw-bold border-0">
+          <span class="position-relative z-3"><i class="fa-brands fa-facebook border p-2 rounded-circle"></i> SIGN UP WITH FACEBOOK</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
